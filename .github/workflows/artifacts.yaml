@@ -16,7 +16,7 @@ jobs:
       - name: Install go tools
         run: go build main.go
       - name: compress
-        run: tar -czvf main.tar.gz ain
+        run: tar -czvf main.tar.gz main
       - name: upload artifacts to release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
